@@ -4,21 +4,31 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.*;
-import android.widget.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import me.kaede.mvp.R;
 import me.kaede.mvp.home.presenter.HomePresenterCompl;
 import me.kaede.mvp.home.presenter.IHomePresenter;
 import me.kaede.mvp.home.view.IHomeView;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class HomeActivity extends ActionBarActivity implements AdapterView.OnItemClickListener,IHomeView {
 
 	private ListView listView;
 	private IHomePresenter homePresenter;
-	List<String> datas = new ArrayList<>();
+	List<String> datas = new ArrayList<String>();
 	private BaseAdapter adapter;
 
 	@Override
