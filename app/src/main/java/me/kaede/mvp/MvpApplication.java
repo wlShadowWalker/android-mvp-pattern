@@ -2,6 +2,7 @@ package me.kaede.mvp;
 
 import android.app.Application;
 import android.content.Context;
+
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
@@ -26,5 +27,6 @@ public class MvpApplication extends Application {
 		super.onCreate();
 
 		refWatcher = LeakCanary.install(this);
+
 	}
 }
