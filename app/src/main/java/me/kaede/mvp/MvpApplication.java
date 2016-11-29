@@ -27,6 +27,6 @@ public class MvpApplication extends Application {
 		super.onCreate();
 
 		refWatcher = LeakCanary.install(this);
-
+		
 	}
 }
